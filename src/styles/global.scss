@@ -1,0 +1,33 @@
+//Breakpoints
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extraLarge: 1200px;
+
+//Colors
+$primaryColor: #9EF01A;
+$secondaryColor: #9EF01A;
+
+@mixin mobile {
+  @media only screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $extraLarge) {
+    @content;
+  }
+}

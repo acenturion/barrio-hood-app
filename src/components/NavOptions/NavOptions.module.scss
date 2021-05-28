@@ -1,0 +1,9 @@
+@import 'src/styles/global';
+
+.selected {
+  background-color: $primaryColor;
+
+  @include desktop{
+    border-bottom: 3px solid black;
+  }
+}
