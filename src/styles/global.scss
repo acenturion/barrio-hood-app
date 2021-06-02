@@ -6,7 +6,7 @@ $extraLarge: 1200px;
 
 //Colors
 $primaryColor: #9EF01A;
-$secondaryColor: #9EF01A;
+$secondaryColor: white;
 
 @mixin mobile {
   @media only screen and (max-width: $small) {

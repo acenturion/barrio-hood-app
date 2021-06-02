@@ -25,7 +25,7 @@ const NavBar = () => {
             </div>
             {showMenu && (
                 <div className={styles.optionsMobile}>
-                    <NavOptions/>
+                    <NavOptions setShowMenu={setShowMenu}/>
                 </div>
             )}
         </div>
