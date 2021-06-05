@@ -31,3 +31,9 @@ $secondaryColor: white;
     @content;
   }
 }
+
+
+@mixin userSelect{
+  user-select: none;
+  cursor: pointer;
+}

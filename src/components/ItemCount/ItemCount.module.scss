@@ -1,0 +1,58 @@
+@import 'src/styles/global';
+
+$button-width: 35px;
+$itemQty-width: 90px;
+$component-height: 40px;
+
+.itemCountContainer {
+  max-width: 250px;
+  padding: 1em;
+}
+
+.itemCount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.buttonController {
+  @include userSelect;
+  width: $button-width;
+  height: $component-height;
+  background-color: $primaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.left {
+  border-radius: 5px 0 0 5px;
+}
+
+.right {
+  border-radius: 0 5px 5px 0;
+}
+
+.itemQty {
+  border: 2px solid black;
+  width: $itemQty-width;
+  height: $component-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.buttonAddToCart {
+  @include userSelect;
+
+  background-color: $primaryColor;
+  font-size: 22px;
+  font-family: 'RopaSans', serif;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+
+}

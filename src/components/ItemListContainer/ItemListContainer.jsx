@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemListContainer = ({greeting}) => {
     return (
-        <div>
+        <div style={{padding: '1em', fontSize: '24px'}}>
             {greeting}
         </div>
     );
