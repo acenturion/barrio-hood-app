@@ -3,6 +3,7 @@ import styles from './NavBar.module.scss'
 import {IoClose, IoMenu} from "react-icons/all";
 import {Link} from "react-router-dom";
 import NavOptions from "../NavOptions/NavOptions";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
 
@@ -18,9 +19,13 @@ const NavBar = () => {
                 </Link>
                 <nav className={styles.optionsDesktop}>
                     <NavOptions/>
+                    <CartWidget/>
                 </nav>
-                <div className={styles.controlNavBarMobile} onClick={() => setShowMenu(prev => !prev)}>
-                    {showMenu ? <IoClose className={styles.icon}/> : <IoMenu className={styles.icon}/>}
+                <div className={styles.controlNavBarMobile}>
+                    <CartWidget/>
+                    <div className={styles.menu} onClick={() => setShowMenu(prev => !prev)}>
+                        {showMenu ? <IoClose className={styles.icon}/> : <IoMenu className={styles.icon}/>}
+                    </div>
                 </div>
             </div>
             {showMenu && (

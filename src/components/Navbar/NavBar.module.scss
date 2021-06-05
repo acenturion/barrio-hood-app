@@ -18,12 +18,18 @@
   align-items: center;
 }
 
+.menu {
+  @include desktop() {
+    display: none;
+  }
+}
+
 .optionsDesktop {
   display: none;
   @include desktop() {
     font-weight: bold;
     display: flex;
-
+    align-items: center;
     & li {
       margin-bottom: 0;
       padding: 0.5em;
@@ -45,6 +51,9 @@
 }
 
 .controlNavBarMobile {
+  display: flex;
+  align-items: center;
+
   @include desktop {
     display: none;
   }
@@ -62,7 +71,7 @@ li {
   margin-bottom: 1em;
   user-select: none;
 
-  @include mobile(){
+  @include mobile() {
     border: 2px solid $primaryColor;
   }
 }

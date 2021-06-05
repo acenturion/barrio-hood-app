@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, useLocation} from "react-router-dom";
-import CartWidget from "../CartWidget/CartWidget";
 import NavOption from "../NavOption/NavOption";
 
 
@@ -20,10 +19,6 @@ const NavOptions = ({setShowMenu = () => {}}) => {
             </Link>
             <Link to="/supermercado" onClick={() => setShowMenu(false)}>
                 <NavOption text={'Supermecado'} isActive={isCurrentActive('/supermercado')}/>
-            </Link>
-            <Link to="/carrito" onClick={() => setShowMenu(false)}>
-                <NavOption text={'Mi carrito'} isSecondary={true}
-                           isActive={isCurrentActive('/carrito')}><CartWidget/></NavOption>
             </Link>
         </>
     );
