@@ -1,0 +1,14 @@
+@import 'src/styles/global';
+
+.itemListContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+}

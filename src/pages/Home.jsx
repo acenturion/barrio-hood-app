@@ -10,7 +10,7 @@ const Home = () => {
     }
     return (
         <div>
-            <ItemListContainer greeting={"Bienvenido a BarrioHood"}/>
+            <ItemListContainer greeting={"Productos Destacados"}/>
             <ItemCount stock={5} initial={1} onAdd={onAdd}/>
         </div>
     );

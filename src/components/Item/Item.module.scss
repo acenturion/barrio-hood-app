@@ -1,0 +1,46 @@
+@import 'src/styles/global';
+
+.itemContainer {
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  padding: 1em 0.2em;
+  display: flex;
+
+  @include desktop {
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin: 1em;
+
+    &:hover{
+      background-color: $grey20;
+    }
+  }
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 130px;
+  max-height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    max-width: 130px;
+    max-height: 180px;
+  }
+}
+
+.itemDataContainer {
+  padding: 1em;
+  & > * {
+    margin-bottom: 0.5em;
+  }
+}
