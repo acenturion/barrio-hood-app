@@ -1,3 +1,4 @@
+const TIME_RESPONSE_MOCK = 2000
 const mockItems = [
     {
         id: 1,
@@ -21,11 +22,22 @@ const mockItems = [
         pictureUrl: 'termo3.png'
     },
 ]
+const getItems = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(mockItems)
+        }, TIME_RESPONSE_MOCK);
+    })
+}
 
-const getItems = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(mockItems)
-    }, 2500);
-})
+const getItem = (idItem) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const searchItem = mockItems.find(mockItem => mockItem.id === idItem);
+            resolve(searchItem)
+        }, TIME_RESPONSE_MOCK);
+    })
+}
 
-export {getItems}
+
+export {getItems, getItem}

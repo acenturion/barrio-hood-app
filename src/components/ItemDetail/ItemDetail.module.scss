@@ -1,0 +1,40 @@
+@import 'src/styles/global';
+
+.itemDetailContainer {
+  padding: 1em;
+}
+
+.itemTitle {
+  font-size: 30px;
+  font-family: 'RopaSans', serif;
+  padding: 1em 0;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $grey20;
+
+  & > img {
+    width: 100%;
+    max-width: 115px;
+
+    @include desktop(){
+      max-width: 200px;
+    }
+  }
+}
+
+.price{
+  font-family: 'RopaSans', serif;
+  font-size: 36px;
+  padding: 0.5em 0;
+  font-style: italic;
+}
+
+.itemDescription{
+  font-size: 18px;
+  padding: 1em 0;
+}
+
