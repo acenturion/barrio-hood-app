@@ -1,12 +1,12 @@
 @import 'src/styles/global';
 
 $button-width: 35px;
-$itemQty-width: 90px;
-$component-height: 40px;
+$itemQty-width: 80px;
+$component-height: 30px;
 
 .itemCountContainer {
   max-width: 250px;
-  padding: 1em;
+  padding: 1em 0;
 }
 
 .itemCount {
@@ -54,5 +54,11 @@ $component-height: 40px;
   padding: 0.5em;
   border-radius: 5px;
   text-align: center;
-
 }
+
+.titleItemCount{
+  font-family: 'RopaSans', serif;
+  font-size: 20px;
+}
+
+

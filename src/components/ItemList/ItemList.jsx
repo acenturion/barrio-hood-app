@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from "../Item/Item";
 import styles from './ItemList.module.scss'
+
 const ItemList = ({items}) => {
     return (
         <div className={styles.itemListContainer}>

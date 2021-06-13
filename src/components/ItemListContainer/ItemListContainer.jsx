@@ -5,10 +5,10 @@ import styles from './ItemListContainer.module.scss'
 
 const ItemListContainer = ({greeting}) => {
 
-    const [items, setITems] = useState(null);
+    const [items, setItems] = useState(null);
 
     useEffect(() => {
-        getItems.then(res => setITems(res))
+        getItems().then(res => setItems(res))
     }, [])
 
     return (

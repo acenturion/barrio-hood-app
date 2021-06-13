@@ -1,0 +1,11 @@
+@import 'src/styles/global';
+
+.footerContainer {
+  display: none;
+  background-color: $primaryColor;
+  padding: 0.5em;
+
+  @include desktop{
+    display: block;
+  }
+}
