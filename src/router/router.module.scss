@@ -1,7 +1,0 @@
-@import 'src/styles/global';
-
-.routerContainer {
-  @include desktop {
-    height: calc(100vh - 142px);
-  }
-}

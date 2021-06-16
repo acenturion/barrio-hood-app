@@ -1,10 +1,13 @@
 import React from 'react';
+import Title from "../components/Title/Title";
+import PageContainer from "../components/PageContainer/PageContainer";
 
 const MyCart = () => {
     return (
-        <div>
-            Mi carrito
-        </div>
+        <PageContainer title={"Mi carrito"}>
+
+            <div>Proximamente!</div>
+        </PageContainer>
     );
 };
 

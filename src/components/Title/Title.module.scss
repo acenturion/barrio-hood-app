@@ -1,0 +1,13 @@
+@import 'src/styles/global';
+
+.title {
+  font-family: 'RopaSans', serif;
+  font-size: 22px;
+  padding: 1em;
+  text-decoration: underline black 2px;
+
+  @include desktop {
+    padding: 1em 0;
+    font-size: 28px;
+  }
+}

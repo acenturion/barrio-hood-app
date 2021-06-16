@@ -1,7 +1,18 @@
 @import 'src/styles/global';
 
-.cardWidgetContainer{
-   @include desktop(){
-     display: block;
-   }
+.cardWidgetContainer {
+  @include desktop() {
+    display: block;
+  }
+
+  a{
+    padding: 7px 7px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a.cartSelected {
+    background-color: white;
+  }
 }

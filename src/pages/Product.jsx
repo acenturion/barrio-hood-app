@@ -1,15 +1,14 @@
 import React from 'react';
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-import {
-    useParams
-} from "react-router-dom";
+import {useParams} from "react-router-dom";
+import PageContainer from "../components/PageContainer/PageContainer";
 
 const Product = () => {
     let {id} = useParams();
     return (
-        <div>
+        <PageContainer>
             <ItemDetailContainer id={id}/>
-        </div>
+        </PageContainer>
     );
 };
 

@@ -1,4 +1,5 @@
-const TIME_RESPONSE_MOCK = 2000
+const TIME_RESPONSE_MOCK_ITEMS = 100
+const TIME_RESPONSE_MOCK_ITEM = 500
 const mockItems = [
     {
         id: 1,
@@ -26,7 +27,7 @@ const getItems = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(mockItems)
-        }, TIME_RESPONSE_MOCK);
+        }, TIME_RESPONSE_MOCK_ITEMS);
     })
 }
 
@@ -35,7 +36,7 @@ const getItem = (idItem) => {
         setTimeout(() => {
             const searchItem = mockItems.find(mockItem => mockItem.id === idItem);
             resolve(searchItem)
-        }, TIME_RESPONSE_MOCK);
+        }, TIME_RESPONSE_MOCK_ITEM);
     })
 }
 

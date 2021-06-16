@@ -1,17 +1,13 @@
 import React from 'react';
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import PageContainer from "../components/PageContainer/PageContainer";
 
 const Home = () => {
-    // const onAdd = (value) => {
-    //     console.info(`El usuario va a comprar ${value} productos`);
-    // }
-
-
     return (
-        <div>
-            <ItemListContainer greeting={"Productos Destacados"}/>
-        </div>
+        <PageContainer title={"Productos Destacados"}>
+            <ItemListContainer/>
+        </PageContainer>
     );
-};
+}
 
 export default Home;

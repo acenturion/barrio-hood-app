@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {getItem} from "../../services/ItemsService";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import styles from './ItemDetailContainer.module.scss'
 
 const ItemDetailContainer = ({id}) => {
 
@@ -13,7 +12,7 @@ const ItemDetailContainer = ({id}) => {
         })
     })
     return (
-        <div className={styles.itemDisplayContainer}>
+        <div>
             <ItemDetail item={item}/>
         </div>
     )

@@ -1,26 +1,20 @@
 import React from 'react';
-import {Link, useLocation} from "react-router-dom";
-import NavOption from "../NavOption/NavOption";
-
+import {NavLink} from "react-router-dom";
+import styles from './NavOptions.module.scss'
 
 const NavOptions = ({setShowMenu = () => {}}) => {
-    const {pathname} = useLocation();
-
-    const isCurrentActive = (route) => {
-        return route === pathname;
-    }
     return (
-        <>
-            <Link to="/" onClick={() => setShowMenu(false)}>
-                <NavOption text={'Ofertas'} isActive={isCurrentActive('/')}/>
-            </Link>
-            <Link to="/tiendas" onClick={() => setShowMenu(false)}>
-                <NavOption text={'Tiendas'} isActive={isCurrentActive('/tiendas')}/>
-            </Link>
-            <Link to="/supermercado" onClick={() => setShowMenu(false)}>
-                <NavOption text={'Supermecado'} isActive={isCurrentActive('/supermercado')}/>
-            </Link>
-        </>
+        <div className={styles.navOptionsController} onClick={() => setShowMenu(false)}>
+            <NavLink to="/ofertas" activeClassName={styles.selected}>
+                Ofertas
+            </NavLink>
+            <NavLink to="/tiendas" activeClassName={styles.selected} >
+                Tiendas
+            </NavLink>
+            <NavLink to="/supermercado" activeClassName={styles.selected}>
+                Supermercado
+            </NavLink>
+        </div>
     );
 };
 

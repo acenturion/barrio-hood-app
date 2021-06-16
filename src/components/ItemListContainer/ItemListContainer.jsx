@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 import ItemList from "../ItemList/ItemList";
 import {getItems} from "../../services/ItemsService";
 import styles from './ItemListContainer.module.scss'
+import Title from "../Title/Title";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
 
     const [items, setItems] = useState(null);
 
@@ -13,7 +14,6 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <div className={styles.itemListsContainer}>
-            <h3 className={styles.title}>{greeting}</h3>
             <ItemList items={items}/>
         </div>
     );
