@@ -5,14 +5,14 @@ import styles from './NavOptions.module.scss'
 const NavOptions = ({setShowMenu = () => {}}) => {
     return (
         <div className={styles.navOptionsController} onClick={() => setShowMenu(false)}>
-            <NavLink to="/ofertas" activeClassName={styles.selected}>
-                Ofertas
+            <NavLink to="/home" activeClassName={styles.selected}>
+                Destacados
             </NavLink>
-            <NavLink to="/tiendas" activeClassName={styles.selected} >
-                Tiendas
+            <NavLink to="/category/1" activeClassName={styles.selected} >
+                Termos
             </NavLink>
-            <NavLink to="/supermercado" activeClassName={styles.selected}>
-                Supermercado
+            <NavLink to="/category/2" activeClassName={styles.selected} >
+                Electronica
             </NavLink>
         </div>
     );

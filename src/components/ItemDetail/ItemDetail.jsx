@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
                     <h2 className={styles.itemTitle}>{item.title}</h2>
                     <div className={styles.imgContainer}>
 
-                        <img src={`../${item.pictureUrl}`} alt="mock-product"/>
+                        <img src={`${item.pictureUrl}`} alt={item.title}/>
                     </div>
                     <div className={styles.itemDescription}>
                         {item.description}
@@ -21,7 +21,7 @@ const ItemDetail = ({item}) => {
                         <div className={styles.price}>$ {item.price}</div>
                         <div className={styles.chipDeal}>Oferta del dia</div>
                     </div>
-                    <ItemCount stock={5} initial={1}/>
+                    <ItemCount stock={item.stock} initial={1}/>
                     <Button/>
                 </div>)
                 : (<Loader/>)}

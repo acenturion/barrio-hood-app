@@ -1,19 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from "../ItemList/ItemList";
 import {getItems} from "../../services/ItemsService";
-import styles from './ItemListContainer.module.scss'
-import Title from "../Title/Title";
+import {useParams} from "react-router-dom";
 
 const ItemListContainer = () => {
-
+    const {id} = useParams();
     const [items, setItems] = useState(null);
 
     useEffect(() => {
-        getItems().then(res => setItems(res))
-    }, [])
-
+        getItems(id).then(res => setItems(res))
+    }, [id])
+    
     return (
-        <div className={styles.itemListsContainer}>
+        <div>
             <ItemList items={items}/>
         </div>
     );

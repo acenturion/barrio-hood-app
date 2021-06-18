@@ -1,13 +1,12 @@
 import React from 'react';
 import PageContainer from "../components/PageContainer/PageContainer";
 
-const MyCart = () => {
+const Categories = () => {
     return (
-        <PageContainer title={"Mi carrito"}>
-
-            <div>Proximamente!</div>
+        <PageContainer title={"Categorias"}>
+            {/*todo lista de categorias*/}
         </PageContainer>
     );
 };
 
-export default MyCart;
+export default Categories;

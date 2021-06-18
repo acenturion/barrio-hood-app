@@ -8,13 +8,13 @@ const Item = ({id, title, description, price, pictureUrl}) => {
     let history = useHistory();
 
     const handleItemClick = () => {
-        history.push('/producto/'+id);
+        history.push('/item/'+id);
     }
 
     return (
         <div className={styles.itemContainer} onClick={handleItemClick}>
             <div className={styles.imageContainer}>
-                <img src={pictureUrl} alt="mock-product"/>
+                <img src={pictureUrl} alt={title}/>
             </div>
             <div className={styles.itemDataContainer}>
                 <h2>{title}</h2>

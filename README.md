@@ -2,4 +2,4 @@
 
 - Navegacion de la pagina:
 
-![](https://i.imgur.com/5u8lAQI.gif)
+![](https://i.imgur.com/vLB1pt9.gif)

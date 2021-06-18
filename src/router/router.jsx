@@ -7,17 +7,20 @@ import Home from "../pages/Home";
 const Router = () => {
     return (
         <Switch>
-            <Route exact path="/">
+            <Route exact path="/home">
                 <Home/>
             </Route>
-            <Route exact path="/Ofertas">
+            <Route exact path="/category/:id">
                 <Home/>
             </Route>
             <Route exact path="/carrito">
                 <MyCart/>
             </Route>
-            <Route exact path="/producto/:id">
+            <Route exact path="/item/:id">
                 <Product/>
+            </Route>
+            <Route exact path="/">
+                <Home/>
             </Route>
         </Switch>
     );
