@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from "../ItemCount/ItemCount.module.scss";
+import styles from "./Button.module.scss";
 
-const Button = ({onClick}) => {
+const Button = ({onClick, text}) => {
     return (
         <div onClick={onClick} className={styles.buttonAddToCart}>
-            Agregar al carrito
+            {text}
         </div>
     );
 };

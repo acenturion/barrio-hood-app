@@ -6,7 +6,6 @@ $component-height: 30px;
 
 .itemCountContainer {
   max-width: 250px;
-  padding: 1em 0;
 }
 
 .itemCount {
@@ -45,16 +44,7 @@ $component-height: 30px;
   font-size: 20px;
 }
 
-.buttonAddToCart {
-  @include userSelect;
 
-  background-color: $primaryColor;
-  font-size: 22px;
-  font-family: 'RopaSans', serif;
-  padding: 0.5em;
-  border-radius: 5px;
-  text-align: center;
-}
 
 .titleItemCount{
   font-family: 'RopaSans', serif;

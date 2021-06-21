@@ -1,0 +1,16 @@
+@import 'src/styles/global';
+
+.buttonAddToCart {
+  @include userSelect;
+
+  background-color: $primaryColor;
+  font-size: 22px;
+  font-family: 'RopaSans', serif;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+
+  @include desktop{
+    max-width: 300px;
+  }
+}

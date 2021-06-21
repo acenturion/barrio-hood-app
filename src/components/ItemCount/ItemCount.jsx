@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import styles from './ItemCount.module.scss'
+import Button from "../Button/Button";
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [itemQty, setItemQty] = useState(initial);
+
 
     const handleIncrement = () => {
         if (itemQty === stock) return;
@@ -21,8 +23,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <div className={styles.itemQty}>{itemQty}</div>
                 <div className={`${styles.buttonController} ${styles.right}`} onClick={handleIncrement}>+</div>
             </div>
+            <Button text={'Agregar al carrito'} onClick={() => onAdd(itemQty)}/>
+
         </div>
     );
-};
+}
 
 export default ItemCount;

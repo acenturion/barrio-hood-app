@@ -1,0 +1,60 @@
+@import 'src/styles/global';
+
+
+.cardMessageContainer {
+  text-align: center;
+  position: fixed;
+  bottom: 277px;
+  right: 0;
+  padding: 1em;
+  width: 80%;
+  border-radius: 10px;
+
+  @include desktop{
+    width: 300px;
+    bottom: 100px;
+  }
+
+}
+
+.success {
+  background-color: $primaryColor;
+  color: black;
+}
+
+.warning {
+  background-color: yellow;
+  color: black;
+}
+
+.error {
+  background-color: tomato;
+  color: black;
+}
+
+
+.open {
+  animation: openCard .75s 1 forwards;
+}
+
+.close {
+  animation: closeCard .75s 1 forwards;
+}
+
+@keyframes closeCard {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes openCard {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-5%)
+  }
+}
