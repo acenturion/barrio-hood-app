@@ -6,8 +6,9 @@ const CardMessage = ({type, message, show = false}) => {
     const [showMessage, setShowMessage] = useState(show);
 
     useEffect(() => {
-        setTimeout(() => setShowMessage(false), 3000)
-    })
+        const timer = setTimeout(() => setShowMessage(false), 3000)
+        return() => clearTimeout(timer);
+    },[])
 
     const handleCloseMessage = () => {
         setShowMessage(prev => !prev)

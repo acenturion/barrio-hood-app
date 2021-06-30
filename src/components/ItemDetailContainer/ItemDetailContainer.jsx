@@ -4,18 +4,16 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = ({id}) => {
 
-    const [item, setItem] = useState(null);
+  const [item, setItem] = useState(null);
 
-    useEffect(() => {
-        getItem(parseInt(id)).then(res => {
-            setItem(res);
-        })
+  useEffect(() => {
+    getItem(parseInt(id)).then(res => {
+      setItem(res);
     })
-    return (
-        <div>
-            <ItemDetail item={item}/>
-        </div>
-    )
+  })
+  return (
+    <ItemDetail item={item}/>
+  )
 };
 
 export default ItemDetailContainer

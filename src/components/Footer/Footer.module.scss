@@ -4,12 +4,13 @@
   display: none;
 
   @include desktop {
-    display: block;
-    padding: 0.5em;
-    background-color: $primaryColor;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    display: none;
+    //display: block;
+    //padding: 0.5em;
+    //background-color: $primaryColor;
+    //position: fixed;
+    //bottom: 0;
+    //width: 100%;
+    //text-align: center;
   }
 }
