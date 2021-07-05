@@ -3,7 +3,6 @@
 .buttonAddToCart {
   @include userSelect;
 
-  background-color: $primaryColor;
   font-size: 22px;
   font-family: 'RopaSans', serif;
   padding: 0.5em;
@@ -13,4 +12,12 @@
   @include desktop{
     max-width: 300px;
   }
+}
+
+.primary{
+  background-color: $primaryColor;
+}
+.secondary{
+  background-color: $secondaryColor;
+  color: white;
 }

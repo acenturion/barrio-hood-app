@@ -21,8 +21,14 @@ const CartProvider = ({children}) => {
     return cart.some(element => element.item.id === itemId)
   }
 
+  const getTotal  = () => {
+    let total = 0;
+    cart.forEach(element => total = element.item.price + total)
+    return total;
+  }
+
   return (
-    <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart}}>
+    <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart, getTotal}}>
       {children}
     </CartContext.Provider>
   );
