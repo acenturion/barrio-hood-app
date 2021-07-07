@@ -22,9 +22,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <div className={`${styles.buttonController} ${styles.left}`} onClick={handleDecrement}>-</div>
                 <div className={styles.itemQty}>{itemQty}</div>
                 <div className={`${styles.buttonController} ${styles.right}`} onClick={handleIncrement}>+</div>
+                ({stock} diponibles)
             </div>
             <Button text={'Agregar al carrito'} onClick={() => onAdd(itemQty)}/>
-
         </div>
     );
 }

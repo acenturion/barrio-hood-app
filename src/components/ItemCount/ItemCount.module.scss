@@ -5,7 +5,7 @@ $itemQty-width: 80px;
 $component-height: 30px;
 
 .itemCountContainer {
-  max-width: 250px;
+  margin-bottom: 1em;
 }
 
 .itemCount {
@@ -32,6 +32,7 @@ $component-height: 30px;
 
 .right {
   border-radius: 0 5px 5px 0;
+  margin-right: 0.5em;
 }
 
 .itemQty {

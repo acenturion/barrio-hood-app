@@ -13,7 +13,7 @@ const CartEmpty = () => {
       <h2>
         Tu carrito está vació
       </h2>
-      <Button text={'Ver Ofertas'} onClick={handleClickButton} />
+      <Button text={'Ver Ofertas'} onClick={handleClickButton}/>
     </div>
   );
 };

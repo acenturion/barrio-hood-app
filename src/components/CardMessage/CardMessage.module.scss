@@ -38,17 +38,10 @@
 }
 
 .close {
-  animation: closeCard .75s 1 forwards;
+  display: none;
 }
 
-@keyframes closeCard {
-  0% {
-    transform: translateX(0)
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+
 
 @keyframes openCard {
   0% {
@@ -57,4 +50,8 @@
   100% {
     transform: translateX(-5%)
   }
+}
+
+.hide{
+  display: none;
 }

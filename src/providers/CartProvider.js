@@ -5,8 +5,17 @@ const CartProvider = ({children}) => {
   const [cart, setCart] = useState([]);
 
   const addItem = (item, quantity) => {
-    const newItem = {item, quantity}
-    setCart(prev => [...prev, newItem]);
+    if(isInCart(item.id)){
+      let cartUpdated = cart.map( element => {
+        if(element.item.id === item.id){
+          element.quantity = quantity;
+        }
+        return element;
+      })
+      setCart(cartUpdated)
+    }else{
+      setCart(prev => [...prev, {item, quantity}]);
+    }
   };
 
   const removeItem = (itemId) => {

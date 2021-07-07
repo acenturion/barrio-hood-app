@@ -1,26 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import styles from './CardMessage.module.scss'
 
-const CardMessage = ({type, message, show = false}) => {
+const CardMessage = ({message, show, setShowMessage}) => {
+  useEffect(() => {
+    const timer = setTimeout(() => setShowMessage(false), 3000)
+    return () => clearTimeout(timer);
+  }, [show, setShowMessage])
 
-    const [showMessage, setShowMessage] = useState(show);
+  const handleCloseMessage = () => {
+    setShowMessage(prev => !prev)
+  }
 
-    useEffect(() => {
-        const timer = setTimeout(() => setShowMessage(false), 3000)
-        return() => clearTimeout(timer);
-    },[])
-
-    const handleCloseMessage = () => {
-        setShowMessage(prev => !prev)
-    }
-
-    return (
-        <div
-            onClick={handleCloseMessage}
-            className={`${styles.cardMessageContainer} ${styles.success} ${showMessage ? styles.open : styles.close}`}>
-            {message}
-        </div>
-    );
+  return (
+    <div
+      onClick={handleCloseMessage}
+      className={`${styles.cardMessageContainer} ${styles.success} ${show ? styles.open : styles.close}`}>
+      {message}
+    </div>
+  );
 };
 
 export default CardMessage;
