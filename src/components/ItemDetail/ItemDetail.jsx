@@ -29,7 +29,6 @@ const ItemDetail = ({item}) => {
   useEffect(() => {
     if (item && isInCart(item.id)) {
       setShowFinish(true);
-      // setShowMessage(true);
     }
   }, [item, isInCart])
 
@@ -39,7 +38,7 @@ const ItemDetail = ({item}) => {
         ? (<div>
           <h2 className={styles.itemTitle}>{item.title}</h2>
           <div className={styles.imgContainer}>
-            <img src={`${item.pictureUrl}`} alt={item.title}/>
+            <img src={`${item.imageId}`} alt={item.title}/>
           </div>
           <div className={styles.itemDescription}>
             {item.description}
@@ -49,9 +48,11 @@ const ItemDetail = ({item}) => {
             <div className={styles.chipDeal}>Oferta del dia</div>
           </div>
 
-          <ItemCount stock={item.stock} initial={1} onAdd={handleOnAddItem} onFinish={handleFinishBuying}/>
+          {showFinish
+            ? <Button text={'Terminar mi compra'} onClick={() => handleFinishBuying()} primary={false}/>
+            : <ItemCount stock={item.stock} initial={1} onAdd={handleOnAddItem} onFinish={handleFinishBuying}/>
+          }
 
-          {showFinish && (<Button text={'Terminar mi compra'} onClick={() => handleFinishBuying()} primary={false}/>)}
 
           {showMessage && <CardMessage
             message={`Agregaste ${qtyItems} ${qtyItems > 1 ? 'productos' : 'producto'} al carrito 🎉`}

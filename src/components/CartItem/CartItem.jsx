@@ -6,7 +6,7 @@ const CartItem = ({element, onClick}) => {
   return (
     <div className={styles.itemCartContainer}>
       <div className={styles.imageContainer}>
-        <img src={element.item.pictureUrl} alt={`img-${element.item.title}`}/>
+        <img src={element.item.imageId} alt={`img-${element.item.title}`}/>
       </div>
       <div className={styles.itemDescription}>
         <div className={styles.titleItem}>

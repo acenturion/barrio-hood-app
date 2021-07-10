@@ -8,10 +8,10 @@ const NavOptions = ({setShowMenu = () => {}}) => {
             <NavLink to="/home" activeClassName={styles.selected}>
                 Destacados
             </NavLink>
-            <NavLink to="/category/1" activeClassName={styles.selected} >
+            <NavLink to="/categoria/Termos" activeClassName={styles.selected} >
                 Termos
             </NavLink>
-            <NavLink to="/category/2" activeClassName={styles.selected} >
+            <NavLink to="/categoria/Electrodomesticos" activeClassName={styles.selected} >
                 Electronica
             </NavLink>
         </div>

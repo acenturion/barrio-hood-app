@@ -10,7 +10,7 @@ const Router = () => {
             <Route exact path="/home">
                 <Home/>
             </Route>
-            <Route exact path="/category/:id">
+            <Route exact path="/categoria/:id">
                 <Home/>
             </Route>
             <Route exact path="/carrito">

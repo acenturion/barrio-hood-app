@@ -4,7 +4,7 @@ import {
     useHistory
 } from "react-router-dom";
 
-const Item = ({id, title, description, price, pictureUrl}) => {
+const Item = ({id, title, description, price, imageId}) => {
     let history = useHistory();
 
     const handleItemClick = () => {
@@ -14,7 +14,7 @@ const Item = ({id, title, description, price, pictureUrl}) => {
     return (
         <div className={styles.itemContainer} onClick={handleItemClick}>
             <div className={styles.imageContainer}>
-                <img src={pictureUrl} alt={title}/>
+                <img src={imageId} alt={title}/>
             </div>
             <div className={styles.itemDataContainer}>
                 <h2>{title}</h2>
