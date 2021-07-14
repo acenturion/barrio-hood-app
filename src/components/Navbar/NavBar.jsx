@@ -4,7 +4,7 @@ import {IoClose, IoMenu} from "react-icons/all";
 import {Link} from "react-router-dom";
 import NavOptions from "../NavOptions/NavOptions";
 import CartWidget from "../CartWidget/CartWidget";
-import CartContext from "../../context/cartContext";
+import CartContext from "../../context/CartContext";
 
 const NavBar = () => {
 

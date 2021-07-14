@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import PageContainer from "../components/PageContainer/PageContainer";
-import CartContext from "../context/cartContext";
+import CartContext from "../context/CartContext";
 import CartItem from "../components/CartItem/CartItem";
 import CartEmpty from "../components/CartEmpty/CartEmpty";
 import CartTotalPrice from "../components/CartTotalPrice/CartTotalPrice";
@@ -14,7 +14,7 @@ const MyCart = () => {
         ? (
           <div style={{paddingBottom: '10em'}}>
             <div style={{padding:'1em'}}>
-              <Button text={'Elimiar todos los productos'} onClick={() => clear()} style={{marginLeft:'auto'}}/>
+              <Button text={'Eliminar todos los productos'} onClick={() => clear()} style={{marginLeft:'auto'}}/>
             </div>
 
             {

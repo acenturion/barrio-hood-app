@@ -5,7 +5,7 @@ import Loader from "../Loader/Loader";
 import {useHistory} from "react-router-dom";
 import Button from "../Button/Button";
 import CardMessage from "../CardMessage/CardMessage";
-import CartContext from "../../context/cartContext";
+import CartContext from "../../context/CartContext";
 
 const ItemDetail = ({item}) => {
 
@@ -55,7 +55,7 @@ const ItemDetail = ({item}) => {
 
 
           {showMessage && <CardMessage
-            message={`Agregaste ${qtyItems} ${qtyItems > 1 ? 'productos' : 'producto'} al carrito 🎉`}
+            message={`🎉 Agregaste ${qtyItems} ${qtyItems > 1 ? 'productos' : 'producto'} al carrito`}
             show={showMessage}
             setShowMessage={setShowMessage}
           />}

@@ -1,0 +1,23 @@
+@import 'src/styles/global';
+
+.formContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 10px;
+}
+label{
+  margin: 5px 0;
+  font-family: 'RopaSans', serif;
+}
+input{
+  height: 40px;
+  border-radius: 10px;
+  border: solid 2px #b1b1b1;
+}
+
+.messageError{
+  color: red;
+  text-align: right;
+}

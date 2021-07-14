@@ -41,3 +41,17 @@ $grey20: #eeeeee;
   user-select: none;
   cursor: pointer;
 }
+
+@mixin button{
+  font-size: 22px;
+  font-family: 'RopaSans', serif;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  color: black;
+
+  @include desktop {
+    max-width: 300px;
+  }
+}

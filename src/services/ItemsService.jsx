@@ -1,4 +1,5 @@
 import {getFirestore} from "../firebase";
+import firebase from "firebase";
 
 const db = getFirestore();
 
@@ -39,5 +40,37 @@ const getItemFirebase = (idItem) => {
   })
 }
 
+const createNewOrderBuy = (user, cart, total) => {
+  const ordersCollection = db.collection('orders')
+  const newOrder = {
+    buyer: user,
+    items: cart,
+    date: firebase.firestore.Timestamp.fromDate(new Date()),
+    total
+  }
 
-export {getItemsFirebase, getItemFirebase}
+  return new Promise((resolve, reject) => {
+    ordersCollection.add(newOrder).then(({id}) => {
+      resolve(id);
+    }).catch(e => {
+      console.log("ocurrio un error", e)
+    })
+  })
+
+}
+
+const getOrders = (email) => {
+  const ordersCollection = db.collection('orders')
+  const query = ordersCollection.where('buyer.email', '==', email);
+
+  return new Promise((resolve, reject) => {
+    query.get().then((result) => {
+      resolve(result);
+    }).catch((e) => {
+      console.log("Ocurrio un error", e)
+    })
+  })
+}
+
+
+export {getItemsFirebase, getItemFirebase, createNewOrderBuy, getOrders}

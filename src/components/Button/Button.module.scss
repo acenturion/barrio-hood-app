@@ -2,16 +2,7 @@
 
 .buttonAddToCart {
   @include userSelect;
-
-  font-size: 22px;
-  font-family: 'RopaSans', serif;
-  padding: 0.5em;
-  border-radius: 5px;
-  text-align: center;
-
-  @include desktop{
-    max-width: 300px;
-  }
+  @include button;
 }
 
 .primary{
@@ -19,5 +10,10 @@
 }
 .secondary{
   background-color: $secondaryColor;
+  color: white;
+}
+
+.disabled{
+  background-color: $grey;
   color: white;
 }

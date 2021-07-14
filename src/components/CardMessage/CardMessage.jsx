@@ -3,7 +3,7 @@ import styles from './CardMessage.module.scss'
 
 const CardMessage = ({message, show, setShowMessage}) => {
   useEffect(() => {
-    const timer = setTimeout(() => setShowMessage(false), 3000)
+    const timer = setTimeout(() => setShowMessage(false), 4500)
     return () => clearTimeout(timer);
   }, [show, setShowMessage])
 
