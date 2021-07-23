@@ -23,6 +23,7 @@ const FormBuy = ({onSubmitForm}) => {
     return errors;
   };
 
+
   const formik = useFormik({
     initialValues: {
       name: '',

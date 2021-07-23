@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import styles from './CardMessage.module.scss'
 
-const CardMessage = ({message, show, setShowMessage}) => {
+const CardMessage = ({message, show, setShowMessage, time = 4500}) => {
   useEffect(() => {
-    const timer = setTimeout(() => setShowMessage(false), 4500)
+    const timer = setTimeout(() => setShowMessage(false), time)
     return () => clearTimeout(timer);
   }, [show, setShowMessage])
 
